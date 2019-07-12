@@ -1,5 +1,8 @@
 package org.apache.solr.handler.dataimport;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Map;
 
 /**
@@ -10,6 +13,8 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class MongoMapperTransformer extends Transformer {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MongoMapperTransformer.class);
 
     @Override
     public Object transformRow(Map<String, Object> row, Context context) {
